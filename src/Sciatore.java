@@ -9,7 +9,7 @@ public class Sciatore implements Comparable<Sciatore> {
         this.tempoManche2 = tempoManche2;
     }
 
-    public int tempoTotale() {
+    public int getTempoTotale() {
         return tempoManche1 + tempoManche2;
     }
 
@@ -19,6 +19,10 @@ public class Sciatore implements Comparable<Sciatore> {
 
     @Override
     public int compareTo(Sciatore s) {
-        return this.tempoTotale()-s.tempoTotale();
+        return this.getTempoTotale()-s.getTempoTotale();
+    }
+    @Override
+    public String toString() {
+       return nome + " " + getTempoTotale();
     }
 }
